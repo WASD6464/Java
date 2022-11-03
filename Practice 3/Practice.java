@@ -17,7 +17,6 @@ public class Practice {
         // System.out.println(findZip("all zip files are zipped"));
         // System.out.println(findZip("all zip files are compressed"));
         // System.out.println("-".repeat(10));
-        // System.out.println("-".repeat(10));
 
         // 3
         // System.out.println("N3");
