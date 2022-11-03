@@ -60,8 +60,7 @@ public class AStarState {
      * waypoint's "previous cost" value.
      **/
     public boolean addOpenWaypoint(Waypoint newWP) {
-        if (!openedNodes.containsKey(newWP.getLocation())
-                || getPathCost(openedNodes.get(newWP.getLocation())) > getPathCost(newWP)) {
+        if (!openedNodes.containsKey(newWP.getLocation()) || getCost(openedNodes.get(newWP.getLocation())) > getCost(newWP)) {
             openedNodes.put(newWP.getLocation(), newWP);
             return true;
         }
@@ -69,10 +68,10 @@ public class AStarState {
     }
 
     // Вспомогательный метод
-    private float getPathCost(Waypoint newWP) {
+    private float getCost(Waypoint newWP) {
         if (newWP == null)
             return 0;
-        return newWP.getPreviousCost() + getPathCost(newWP.getPrevious());
+        return newWP.getPreviousCost() + getCost(newWP.getPrevious());
     }
 
     /** Returns the current number of open waypoints. **/
