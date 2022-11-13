@@ -6,83 +6,83 @@ public class Practice {
     public static void main(String[] args) {
 
         // 1
-        // System.out.println("N1");
-        // System.out.println(solutions(1, 0, -1));
-        // System.out.println(solutions(1, 0, 0));
-        // System.out.println(solutions(1, 0, 1));
-        // System.out.println("-".repeat(10));
+        System.out.println("N1");
+        System.out.println(solutions(1, 0, -1));
+        System.out.println(solutions(1, 0, 0));
+        System.out.println(solutions(1, 0, 1));
+        System.out.println("-".repeat(10));
 
         // 2
-        // System.out.println("N2");
-        // System.out.println(findZip("all zip files are zipped"));
-        // System.out.println(findZip("all zip files are compressed"));
-        // System.out.println("-".repeat(10));
+        System.out.println("N2");
+        System.out.println(findZip("all zip files are zipped"));
+        System.out.println(findZip("all zip files are compressed"));
+        System.out.println("-".repeat(10));
 
         // 3
-        // System.out.println("N3");
-        // System.out.println(checkPerfect(6));
-        // System.out.println(checkPerfect(28));
-        // System.out.println(checkPerfect(496));
-        // System.out.println(checkPerfect(12));
-        // System.out.println(checkPerfect(97));
-        // System.out.println("-".repeat(10));
+        System.out.println("N3");
+        System.out.println(checkPerfect(6));
+        System.out.println(checkPerfect(28));
+        System.out.println(checkPerfect(496));
+        System.out.println(checkPerfect(12));
+        System.out.println(checkPerfect(97));
+        System.out.println("-".repeat(10));
 
         // 4
-        // System.out.println("N4");
-        // System.out.println(flipEndChars("Cat, dog, and mouse."));
-        // System.out.println(flipEndChars("ada"));
-        // System.out.println(flipEndChars("Ada"));
-        // System.out.println(flipEndChars("z"));
-        // System.out.println("-".repeat(10));
+        System.out.println("N4");
+        System.out.println(flipEndChars("Cat, dog, and mouse."));
+        System.out.println(flipEndChars("ada"));
+        System.out.println(flipEndChars("Ada"));
+        System.out.println(flipEndChars("z"));
+        System.out.println("-".repeat(10));
 
         // 5
-        // System.out.println("N5");
-        // System.out.println(isValidHexCode("#CD5C5C"));
-        // System.out.println(isValidHexCode("#EAECEE"));
-        // System.out.println(isValidHexCode("#eaecee"));
-        // System.out.println(isValidHexCode("#CD5C58C"));
-        // System.out.println(isValidHexCode("#CD5C5Z"));
-        // System.out.println(isValidHexCode("#CD5C&C"));
-        // System.out.println(isValidHexCode("CD5C5C"));
-        // System.out.println("-".repeat(10));
+        System.out.println("N5");
+        System.out.println(isValidHexCode("#CD5C5C"));
+        System.out.println(isValidHexCode("#EAECEE"));
+        System.out.println(isValidHexCode("#eaecee"));
+        System.out.println(isValidHexCode("#CD5C58C"));
+        System.out.println(isValidHexCode("#CD5C5Z"));
+        System.out.println(isValidHexCode("#CD5C&C"));
+        System.out.println(isValidHexCode("CD5C5C"));
+        System.out.println("-".repeat(10));
 
         // 6
-        // System.out.println("N6);
-        // System.out.println(same(new Integer[] { 1, 3, 4, 4, 4 }, new Integer[] { 2,
-        // 5, 7 }));
-        // System.out.println(same(new Integer[] { 9, 8, 7, 6 }, new Integer[] { 4, 4,
-        // 3, 1 }));
-        // System.out.println(same(new Integer[] { 2 }, new Integer[] { 3, 3, 3, 3, 3
-        // }));
-        // System.out.println("-".repeat(10));
+        System.out.println("N6");
+        System.out.println(same(new Integer[] { 1, 3, 4, 4, 4 }, new Integer[] { 2,
+        5, 7 }));
+        System.out.println(same(new Integer[] { 9, 8, 7, 6 }, new Integer[] { 4, 4,
+        3, 1 }));
+        System.out.println(same(new Integer[] { 2 }, new Integer[] { 3, 3, 3, 3, 3
+        }));
+        System.out.println("-".repeat(10));
 
         // 7
-        // System.out.println("N7);
-        // System.out.println(isKaprekar(3));
-        // System.out.println(isKaprekar(5));
-        // System.out.println(isKaprekar(297));
-        // System.out.println("-".repeat(10));
+        System.out.println("N7");
+        System.out.println(isKaprekar(3));
+        System.out.println(isKaprekar(5));
+        System.out.println(isKaprekar(297));
+        System.out.println("-".repeat(10));
 
         // 8
-        // System.out.println("N8);
-        // System.out.println(longestZero("01100001011000"));
-        // System.out.println(longestZero("100100100"));
-        // System.out.println(longestZero("11111"));
-        // System.out.println("-".repeat(10));
+        System.out.println("N8");
+        System.out.println(longestZero("01100001011000"));
+        System.out.println(longestZero("100100100"));
+        System.out.println(longestZero("11111"));
+        System.out.println("-".repeat(10));
 
         // 9
-        // System.out.println("N9);
-        // System.out.println(nextPrime(12));
-        // System.out.println(nextPrime(24));
-        // System.out.println(nextPrime(11));
-        // System.out.println("-".repeat(10));
+        System.out.println("N9");
+        System.out.println(nextPrime(12));
+        System.out.println(nextPrime(24));
+        System.out.println(nextPrime(11));
+        System.out.println("-".repeat(10));
 
         // 10
-        // System.out.println("N9);
-        // System.out.println(rightTriangle(3, 4, 5));
-        // System.out.println(rightTriangle(145, 105, 100));
-        // System.out.println(rightTriangle(70, 130, 110));
-        // System.out.println("-".repeat(10));
+        System.out.println("N10");
+        System.out.println(rightTriangle(3, 4, 5));
+        System.out.println(rightTriangle(145, 105, 100));
+        System.out.println(rightTriangle(70, 130, 110));
+        System.out.println("-".repeat(10));
     }
 
     public static int solutions(int a, int b, int c) {
