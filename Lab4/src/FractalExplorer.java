@@ -11,22 +11,22 @@ import java.awt.*;
 
 public class FractalExplorer {
 
-    private static final double CLICK_NEW_SCALE = 0.5;
-    private static final String SCREEN_TITLE = "Множество мандельброта";
-    private static final String RESET_BUTTON_TEXT = "RESET";
+    private final double CLICK_NEW_SCALE = 0.5;
+    private final String SCREEN_TITLE = "Множество мандельброта";
+    private final String RESET_BUTTON_TEXT = "RESET";
 
     private JFrame frame;
     private JButton resetButton;
     private JImageDisplay image;
     private int screenSize;
     private FractalGenerator fractalGenerator;
-    private Rectangle2D.Double currentFractalRect;
+    private Rectangle2D.Double currentRectangle;
 
     public FractalExplorer(int ScreenSize) {
         screenSize = ScreenSize;
-        currentFractalRect = new Rectangle2D.Double();
+        currentRectangle = new Rectangle2D.Double();
         fractalGenerator = new Mandelbrot();
-        fractalGenerator.getInitialRange(currentFractalRect);
+        fractalGenerator.getInitialRange(currentRectangle);
     }
 
     public void createAndShowGUI() {
@@ -37,11 +37,10 @@ public class FractalExplorer {
 
         resetButton = new JButton();
         resetButton.setText(RESET_BUTTON_TEXT);
-        resetButton.setAction(null);
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fractalGenerator.getInitialRange(currentFractalRect);
+                fractalGenerator.getInitialRange(currentRectangle);
                 drawFractal();
             }
         });
@@ -56,14 +55,14 @@ public class FractalExplorer {
             public void mouseClicked(MouseEvent e) {
 
                 var xCoord = FractalGenerator.getCoord(
-                        currentFractalRect.x,
-                        currentFractalRect.x + currentFractalRect.width,
+                        currentRectangle.x,
+                        currentRectangle.x + currentRectangle.width,
                         screenSize, e.getX());
                 var yCoord = FractalGenerator.getCoord(
-                        currentFractalRect.y,
-                        currentFractalRect.y + currentFractalRect.width,
+                        currentRectangle.y,
+                        currentRectangle.y + currentRectangle.width,
                         screenSize, e.getY());
-                fractalGenerator.recenterAndZoomRange(currentFractalRect, xCoord, yCoord, CLICK_NEW_SCALE);
+                fractalGenerator.recenterAndZoomRange(currentRectangle, xCoord, yCoord, CLICK_NEW_SCALE);
 
                 drawFractal();
             }
@@ -112,12 +111,12 @@ public class FractalExplorer {
             for (int y = 0; y < screenSize; y++) {
 
                 var xCoord = FractalGenerator.getCoord(
-                        currentFractalRect.x,
-                        currentFractalRect.x + currentFractalRect.width,
+                        currentRectangle.x,
+                        currentRectangle.x + currentRectangle.width,
                         screenSize, x);
                 var yCoord = FractalGenerator.getCoord(
-                        currentFractalRect.y,
-                        currentFractalRect.y + currentFractalRect.width,
+                        currentRectangle.y,
+                        currentRectangle.y + currentRectangle.width,
                         screenSize, y);
                 var iterations = fractalGenerator.numIterations(xCoord, yCoord);
 

@@ -27,8 +27,4 @@ public class JImageDisplay extends javax.swing.JComponent {
     public void drawPixel(int x, int y, int rgbColor) {
         this.image.setRGB(x, y, rgbColor);
     }
-
-    public void setRGB(int x, int y, int RGB) {
-        this.image.setRGB(x, y, RGB);
-    }
 }
