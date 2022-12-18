@@ -1,7 +1,7 @@
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-// import com.google.common.hash.Hashing;
+import com.google.common.hash.Hashing;
 
 public class Practice {
     public static void main(String[] args) {
@@ -63,11 +63,11 @@ public class Practice {
         System.out.println("-".repeat(10));
 
         // 8
-        // System.out.println("N8");
-        // System.out.println(getSha256Hash("password123"));
-        // System.out.println(getSha256Hash("Fluffy@home"));
-        // System.out.println(getSha256Hash("Hey dude!"));
-        // System.out.println("-".repeat(10));
+        System.out.println("N8");
+        System.out.println(getSha256Hash("password123"));
+        System.out.println(getSha256Hash("Fluffy@home"));
+        System.out.println(getSha256Hash("Hey dude!"));
+        System.out.println("-".repeat(10));
 
         // 9
         System.out.println("N9");
@@ -342,9 +342,9 @@ public class Practice {
         }
     }
 
-    // public static String getSha256Hash(String message) {
-    //     return Hashing.sha256().hashString(message, StandardCharsets.UTF_8).toString();
-    // }
+    public static String getSha256Hash(String message) {
+        return Hashing.sha256().hashString(message, StandardCharsets.UTF_8).toString();
+    }
 
     public static String correctTitle(String str) {
 
