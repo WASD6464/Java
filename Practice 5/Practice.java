@@ -5,14 +5,14 @@ import com.google.common.hash.Hashing;
 
 public class Practice {
     public static void main(String[] args) {
-//        // 1
+        // 1
         System.out.println("N1");
         System.out.println(encrypt("Hello"));
         System.out.println(decrypt(new Integer[]{72, 33, -73, 84, -12, -3, 13, -13, -68}));
         System.out.println(encrypt("Sunshine"));
         System.out.println("-".repeat(10));
-//
-//        // 2
+
+        // 2
         System.out.println("N2");
         System.out.println(canMove("Rook", "A8", "H8"));
         System.out.println(canMove("Bishop", "A7", "G1"));
@@ -21,23 +21,23 @@ public class Practice {
         System.out.println(canMove("Knight", "C4", "A3"));
         System.out.println(canMove("Pawn", "B7", "B5"));
         System.out.println("-".repeat(10));
-//
-//        // 3
+
+        // 3
         System.out.println("N3");
         System.out.println(canComplete("butl", "beautiful"));
         System.out.println(canComplete("butlz", "beautiful"));
         System.out.println(canComplete("tulb", "beautiful"));
         System.out.println(canComplete("bbutl", "beautiful"));
         System.out.println("-".repeat(10));
-//
-//        // 4
+
+        // 4
         System.out.println("N4");
         System.out.println(sumDigProd(16, 28));
         System.out.println(sumDigProd(0));
         System.out.println(sumDigProd(1, 2, 3, 4, 5, 6));
         System.out.println("-".repeat(10));
-//
-//        // 5
+
+        // 5
         System.out.println("N5");
         System.out.println(sameVowelGroup(new String[]{"toe", "ocelot", "maniac"}));
         System.out.println(sameVowelGroup(new String[]{"many", "carriage", "emit", "apricot", "animal"}));
