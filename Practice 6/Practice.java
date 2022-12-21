@@ -160,9 +160,8 @@ public class Practice {
         Double a = null;
         while (matcher.find()) {
             try {
-                if (r == null) {
-                    r = Integer.parseInt(matcher.group());
-                } else if (g == null) {
+                if (r == null) r = Integer.parseInt(matcher.group());
+                else if (g == null) {
                     g = Integer.parseInt(matcher.group());
                 } else if (b == null) {
                     b = Integer.parseInt(matcher.group());
@@ -174,17 +173,10 @@ public class Practice {
             }
         }
 
-        if (r == null || r > 255 || r < 0)
-            return false;
-
-        if (g == null || g > 255 || g < 0)
-            return false;
-
-        if (b == null || b > 255 || b < 0)
-            return false;
-
-        if (a != null && ((a > 1) || a < 0))
-            return false;
+        if (r == null || r > 255 || r < 0) return false;
+        if (g == null || g > 255 || g < 0) return false;
+        if (b == null || b > 255 || b < 0) return false;
+        if (a != null && ((a > 1) || a < 0)) return false;
 
         return (a == null && str.contains("rgb")) || (a != null && str.contains("rgba"));
 
