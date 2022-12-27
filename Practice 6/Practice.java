@@ -93,26 +93,26 @@ public class Practice {
 
     public static int bell(int n) {
 
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>(n);
+        ArrayList<ArrayList<Integer>> resulted = new ArrayList<>(n);
         ArrayList<Integer> firstRow = new ArrayList<>(1);
 
         firstRow.add(1);
-        res.add(firstRow);
+        resulted.add(firstRow);
 
         for (int i = 1; i < n; i++) {
 
             ArrayList<Integer> newArray = new ArrayList<>(i + 1);
-            ArrayList<Integer> lastArray = res.get(res.size() - 1);
+            ArrayList<Integer> lastArray = resulted.get(resulted.size() - 1);
 
             newArray.add(lastArray.get(lastArray.size() - 1));
             for (int k = 0; k < i; k++) {
                 newArray.add(lastArray.get(k) + newArray.get(k));
             }
-            res.add(newArray);
+            resulted.add(newArray);
 
         }
 
-        ArrayList<Integer> lastRow = res.get(res.size() - 1);
+        ArrayList<Integer> lastRow = resulted.get(resulted.size() - 1);
 
         return lastRow.get(lastRow.size() - 1);
 
