@@ -143,7 +143,6 @@ public class Practice {
     }
 
     public static String translateSentence(String a) {
-        // Все буквы кроме буквенно-цифровых и _ 
         Matcher matcher = Pattern.compile("\\w+").matcher(a); 
 
         return matcher.replaceAll(matchResult -> translateWord(matchResult.group()));
