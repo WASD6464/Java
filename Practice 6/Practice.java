@@ -143,8 +143,8 @@ public class Practice {
     }
 
     public static String translateSentence(String a) {
-
-        Matcher matcher = Pattern.compile("\\w+").matcher(a);
+        // Все буквы кроме буквенно-цифровых и _ 
+        Matcher matcher = Pattern.compile("\\w+").matcher(a); 
 
         return matcher.replaceAll(matchResult -> translateWord(matchResult.group()));
 
@@ -335,35 +335,35 @@ public class Practice {
 
         String[] basic = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
-        String res = "";
+        String result = "";
 
-        res += "M".repeat(m);
+        result += "M".repeat(m);
 
         if (c == 4) {
             if (d == 1) {
-                res += "CM";
+                result += "CM";
             } else {
-                res += "CD";
+                result += "CD";
             }
         } else {
-            res += "D".repeat(d);
-            res += "C".repeat(c);
+            result += "D".repeat(d);
+            result += "C".repeat(c);
         }
 
         if (x == 4) {
             if (l == 1) {
-                res += "XC";
+                result += "XC";
             } else {
-                res += "XL";
+                result += "XL";
             }
         } else {
-            res += "L".repeat(d);
-            res += "X".repeat(c);
+            result += "L".repeat(d);
+            result += "X".repeat(c);
         }
 
-        res += basic[num];
+        result += basic[num];
 
-        return res;
+        return result;
 
     }
 
