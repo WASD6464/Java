@@ -143,7 +143,7 @@ public class Practice {
     }
 
     public static String translateSentence(String a) {
-        Matcher matcher = Pattern.compile("\\w+").matcher(a); 
+        Matcher matcher = Pattern.compile("\\w+").matcher(a);
 
         return matcher.replaceAll(matchResult -> translateWord(matchResult.group()));
 
@@ -159,7 +159,8 @@ public class Practice {
         Double a = null;
         while (matcher.find()) {
             try {
-                if (r == null) r = Integer.parseInt(matcher.group());
+                if (r == null)
+                    r = Integer.parseInt(matcher.group());
                 else if (g == null) {
                     g = Integer.parseInt(matcher.group());
                 } else if (b == null) {
@@ -172,10 +173,14 @@ public class Practice {
             }
         }
 
-        if (r == null || r > 255 || r < 0) return false;
-        if (g == null || g > 255 || g < 0) return false;
-        if (b == null || b > 255 || b < 0) return false;
-        if (a != null && ((a > 1) || a < 0)) return false;
+        if (r == null || r > 255 || r < 0)
+            return false;
+        if (g == null || g > 255 || g < 0)
+            return false;
+        if (b == null || b > 255 || b < 0)
+            return false;
+        if (a != null && ((a > 1) || a < 0))
+            return false;
 
         return (a == null && str.contains("rgb")) || (a != null && str.contains("rgba"));
 
@@ -216,7 +221,7 @@ public class Practice {
         return stripUrlParams(url, new String[] {});
     }
 
-    public static String[] getHashTags(String str) {
+    public static List<String> getHashTags(String str) {
 
         ArrayList<String> words = new ArrayList<>();
         Matcher matcher = Pattern.compile("\\w+").matcher(str);
@@ -231,23 +236,24 @@ public class Practice {
             if (maxes[0] == null || word.length() > maxes[0].length()) {
                 maxes[2] = maxes[1];
                 maxes[1] = maxes[0];
-                maxes[0] = word;
+                maxes[0] = word.toString();
             } else if (maxes[1] == null || word.length() > maxes[1].length()) {
                 maxes[2] = maxes[1];
-                maxes[1] = word;
+                maxes[1] = word.toString();
             } else if (maxes[2] == null || word.length() > maxes[2].length()) {
-                maxes[2] = word;
+                maxes[2] = word.toString();
             }
 
         }
-        ArrayList<String> res = new ArrayList<>();
+        List<String> res = new ArrayList<String>();
 
         for (int i = 0; i < maxes.length; i++) {
             if (maxes[i] == null)
                 break;
-            res.add("#" + maxes[i].toLowerCase());
+            res.add("#" + String.valueOf(maxes[i].toLowerCase()));
         }
-        return res.toArray(new String[0]);
+
+        return res;
 
     }
 
